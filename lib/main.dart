@@ -4,10 +4,6 @@ import 'package:flutter/material.dart';
 import 'hls_page.dart';
 
 List<CameraDescription> cameras;
-final _tab = <Tab> [
-  Tab( text:'RTMP', icon: Icon(Icons.not_started_outlined)),
-  Tab( text:'HLS', icon: Icon(Icons.ondemand_video)),
-];
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -21,7 +17,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
-
   TabController _tabController;
 
   @override
@@ -32,6 +27,11 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
         length: 2, vsync: this
     );
   }
+
+  final _tab = <Tab> [
+    Tab( text:'RTMP', icon: Icon(Icons.not_started_outlined)),
+    Tab( text:'HLS', icon: Icon(Icons.ondemand_video)),
+  ];
 
   @override
   Widget build(BuildContext context) {
