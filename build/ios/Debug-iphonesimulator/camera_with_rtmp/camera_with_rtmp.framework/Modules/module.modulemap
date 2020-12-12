@@ -1,0 +1,11 @@
+framework module camera_with_rtmp {
+  umbrella header "camera_with_rtmp-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module camera_with_rtmp.Swift {
+    header "camera_with_rtmp-Swift.h"
+    requires objc
+}
